@@ -1,0 +1,28 @@
+<app>
+  <div class="uk-flex uk-flex-center uk-flex-middle uk-flex-column" uk-height-viewport uk-grid>
+    <div class="uk-width-1-2 uk-text-center">
+      <a class="logotipo" onclick={ () => tocar() }>
+        <img src="/arquivos/imagens/logotipo.png"/>
+      </a>
+      <audio style="display: none;" id="audio">
+        <source src="/arquivos/canto.ogg" type="audio/ogg">
+      </audio>
+      <p>Software & Games</p>
+      <p>contato@chibum.com</p>
+    </div>
+  </div>
+  <script>
+  export default {
+    tocar() {
+      var x = document.getElementById("audio")
+      x.currentTime = 0
+      x.play()
+    }
+  }
+  </script>
+  <style>
+    .logotipo {
+      cursor: pointer;
+    }
+  </style>
+</app>
